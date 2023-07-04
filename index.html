@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio de JS: Operadora</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <!-- Muestre un encabezado con el texto: “Realizar operación con:”
+Tenga en un sola línea dos inputs de máximo 4 caracteres y entre los 
+inputs un select que tenga recogidas las siguientes
+operaciones matemáticas: “suma, resta, multiplicación y división”
+El resultado de la operación elegida deberá mostrarse debajo
+de los inputs con un texto que ponga: “El resultado de la operación es:” y añadir el valor del resultado. -->
+
+    <h1>Realizar operación con:</h1>
+     <form id="operadora" action="#" onsubmit="obtenerResultado();return false">  <!--onsubmit tienes una funcion y un return false,para evitar la recarga de la web que provocaría el form.-->
+        <select name="operacion" id="operador">
+        <input id="ope1" type="text" maxlength="4" size="4" /> 
+            <option value="suma">+</option>
+            <option value="resta">-</option>
+            <option value="producto">*</option>
+            <option value="division">/</option>
+        </select>
+        <input id="ope2" type="text" maxlength="4" size="4" />
+        <br />
+        <input type="submit" value="El resultado de la operación es: " />
+
+        <p name="resultado" id="resultado"></p>
+    </form>
+    <button onclick="limpiadatos();">Limpiar datos</button>
+    <script src="js/aritme.js"></script>
+</body>
+
+</html>
